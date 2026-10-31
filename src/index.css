@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@theme {
+  --color-royal-black: #050505;
+  --color-royal-dark: #09090b;
+  --color-royal-surface: #0e0e11;
+  --color-royal-card: #131316;
+  --color-royal-border: #262218;
+  --color-royal-gold: #d4af37;
+  --color-royal-gold-light: #f7e27d;
+  --color-royal-gold-dark: #8c6a1d;
+  --color-royal-gold-mid: #c9a227;
+  --color-royal-gold-deep: #9a7416;
+  --color-royal-text: #f5f4f0;
+  --color-royal-muted: #9e9789;
+
+  --font-serif: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-cursive: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  background-color: #050505;
+}
+
+body {
+  background-color: #050505;
+  color: #f5f4f0;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  font-style: normal;
+}
+
+/* Standard Clean Typography Utilities */
+.font-serif-luxury {
+  font-family: var(--font-sans);
+  letter-spacing: 0.08em;
+}
+
+.font-editorial {
+  font-family: var(--font-sans);
+  font-style: normal;
+}
+
+/* Primary Requested Golden Gradient */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #8c6a1d 0%, #c9a227 25%, #f7e27d 50%, #d4af37 70%, #9a7416 100%);
+}
+
+.bg-gold-gradient:hover {
+  background: linear-gradient(135deg, #9f7922 0%, #d8ae2c 25%, #fff194 50%, #dfb83d 70%, #ad831a 100%);
+}
+
+.bg-gold-subtle {
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, rgba(212, 175, 55, 0.02) 100%);
+}
+
+/* Shimmer Gold Text Gradients */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #8c6a1d 0%, #c9a227 25%, #f7e27d 50%, #d4af37 70%, #9a7416 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-light {
+  background: linear-gradient(135deg, #ffffff 0%, #f7e27d 45%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-bright {
+  background: linear-gradient(135deg, #fff9db 0%, #f7e27d 40%, #c9a227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Luxury Dark Black & Gold Cards */
+.glass-panel {
+  background: rgba(14, 14, 17, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+}
+
+.glass-panel:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+.glass-card-dark {
+  background: rgba(10, 10, 12, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.glass-card-dark:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Gold Glow Effects */
+.shadow-gold-glow {
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.25), 0 0 10px rgba(247, 226, 125, 0.15);
+}
+
+.shadow-gold-glow-lg {
+  box-shadow: 0 0 60px rgba(212, 175, 55, 0.32), 0 0 20px rgba(247, 226, 125, 0.2);
+}
+
+.border-gold-subtle {
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+/* Ambient Radial Lighting */
+.ambient-glow-gold {
+  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.22) 0%, rgba(140, 106, 29, 0.08) 50%, transparent 75%);
+}
+
+.ambient-glow-dark {
+  background: radial-gradient(circle at center, rgba(25, 23, 19, 0.4) 0%, rgba(5, 5, 5, 0.95) 70%, #050505 100%);
+}
+
+/* Floating Animation */
+@keyframes floatGentle {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(0.4deg);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+/* Shimmer Border Animation */
+@keyframes goldPulse {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-gold-pulse {
+  animation: goldPulse 4s ease-in-out infinite;
+}
+
+/* Custom Scrollbar - Dark Black & Gold */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8c6a1d, #c9a227);
+  border-radius: 9999px;
+  border: 1px solid #050505;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #c9a227, #f7e27d);
+}
