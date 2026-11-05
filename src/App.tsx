@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { CartProvider } from './context/CartContext';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';

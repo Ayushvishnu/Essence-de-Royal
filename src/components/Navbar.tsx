@@ -38,33 +38,30 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-[#050505]/95 backdrop-blur-md border-b border-[#262218] py-3.5 shadow-lg'
-            : 'bg-gradient-to-b from-[#050505]/90 via-[#050505]/50 to-transparent py-5'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-[#050505]/50 backdrop-blur-md border-b border-[#262218]/50 shadow-[0_4px_25px_rgba(0,0,0,0.5)] ${isScrolled ? 'py-3' : 'py-4 sm:py-5'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          
-          {/* Brand Logo & Royal Crest */}
+
+          {/* Brand Logo with Aroma_Logo.png */}
           <a
             href="#hero"
             className="group flex items-center space-x-3 focus:outline-none"
             aria-label="Essence de Royal Home"
           >
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#d4af37]/50 flex items-center justify-center bg-black/70 group-hover:border-[#f7e27d] transition-all duration-300 shadow-gold-glow">
-              <span className="text-base sm:text-lg text-gold-gradient font-bold leading-none">
-                ⚜
-              </span>
-            </div>
-            <div className="flex flex-col items-start">
+            <img
+              src="/assets/images/Aroma_Logo.png"
+              alt="Aroma Logo"
+              className="brand-logo-zoom"
+            />
+            {/* <div className="flex flex-col items-start">
               <span className="tracking-[0.2em] text-sm sm:text-base font-bold text-white group-hover:text-[#f7e27d] transition-colors leading-tight">
                 ESSENCE <span className="text-gold-gradient">DE ROYAL</span>
               </span>
               <span className="text-[8px] sm:text-[9px] tracking-[0.3em] text-[#c9a227] uppercase font-semibold">
                 HAUTE PARFUMERIE · EST. 2012
               </span>
-            </div>
+            </div> */}
           </a>
 
           {/* Desktop Navigation Links */}
@@ -83,7 +80,7 @@ export const Navbar: React.FC = () => {
 
           {/* Right Action Tools: Watch Film & Mobile Menu Toggle (Cart & Buy buttons removed) */}
           <div className="flex items-center space-x-3 sm:space-x-4">
-            
+
             {/* Campaign Film Trigger */}
             <button
               type="button"
@@ -110,24 +107,18 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer Menu */}
       <div
-        className={`fixed inset-0 z-50 bg-[#050505]/98 backdrop-blur-2xl transition-all duration-300 md:hidden flex flex-col ${
-          mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`fixed inset-0 z-50 bg-[#050505]/98 backdrop-blur-2xl transition-all duration-300 md:hidden flex flex-col ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
       >
         {/* Drawer Header */}
         <div className="flex items-center justify-between p-5 border-b border-[#262218]">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 rounded-full border border-[#d4af37]/60 flex items-center justify-center bg-black shadow-gold-glow">
-              <span className="text-[#f7e27d] font-bold">⚜</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="tracking-[0.2em] text-base font-bold text-white">
-                ESSENCE <span className="text-gold-gradient">DE ROYAL</span>
-              </span>
-              <span className="text-[9px] tracking-[0.3em] text-[#c9a227]">
-                PARIS & GRASSE · SINCE 2012
-              </span>
-            </div>
+            <img
+              src="/assets/images/Aroma_Logo.png"
+              alt="Aroma Logo"
+              className="mobile-logo-zoom"
+            />
+
           </div>
 
           <button
